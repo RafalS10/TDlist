@@ -1,5 +1,5 @@
 # To DO List
-![picture](https://github.com/RafalS10/TDlist/blob/main/images/IMG_0817.jpg)
+![picture](https://github.com/RafalS10/TDlist/blob/main/images/TDlist.jpg)
 
 This page is about daily simple things we have to do. To not forget about it we have such an app to help us.
 
