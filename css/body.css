@@ -1,0 +1,32 @@
+.container {
+    max-width: 800px;
+    margin: 20px;
+    line-height: 1.5;
+    text-align:center;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+.body {
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+    background-color: rgba(238, 238, 238, 0.881);
+}
+
+
+.header {
+    margin-top: 36px;
+}
+.row-section {
+    margin-bottom: 10px;
+}
+
+.row-section__item {
+    background-color: white;
+    padding: 16px;
+    border-bottom: 1px solid #ddd;
+}
+
+.row-section__header {
+    margin: 0;
+    font-size: 20px;
+}

@@ -1,0 +1,15 @@
+.button__done {
+    background-color: green;
+    color:white;
+    height: 36px;
+    width: 36px;
+    min-width: 36px;
+    font-size: 24px;
+}
+
+.button__remove {
+    background-color: red;
+    color:white;
+    height: 36px;
+    width: 36px;
+}
