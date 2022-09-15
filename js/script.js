@@ -1,19 +1,22 @@
 {
-    const tasks = [];
+    let tasks = [];
+    let hideDoneTasks = false;
 
     const addNewTask = (newTaskContent) => {
-        tasks.push({
-            content: newTaskContent,
-            dobe: false,
-        });
-
+        tasks = [
+            ...tasks,
+            { content: newTaskContent },
+        ];
         render();
     };
 
     const removeTask = (taskIndex) => {
-        tasks.splice(taskIndex, 1);
+        tasks = [
+            tasks.slice(0, taskIndex),
+            tasks.slice(tasksIndex +1),
+        ];
         render();
-    }
+    };
 
     const toggleTaskDone = (taskIndex) => {
         tasks[taskIndex].done = !tasks[taskIndex].done;
@@ -67,7 +70,7 @@
         event.preventDefault();
 
         const inputElement = document.querySelector(".js-newTask")
-        
+
         const newTaskContent = document.querySelector(".js-newTask").value.trim();
 
         if (newTaskContent === "") {
