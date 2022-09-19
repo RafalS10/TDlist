@@ -15,5 +15,5 @@ We can as well put our task in to the bin.
 
 I wrote this page using html,css,js. I was as well using flex and BEM covention.
 
-![sample](https://github.com/RafalS10/TDlist/blob/main/images/tdlist.gif)
+![sample](https://github.com/RafalS10/TDlist/blob/main/images/tdlist1.gif)
 
