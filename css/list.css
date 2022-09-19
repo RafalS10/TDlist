@@ -4,22 +4,103 @@
     flex-direction: column;
     gap: 8px;
     padding-left: 0;
-}
-
-.list__item {
-    display: flex;
-    align-items: center;
-    border-bottom: 1px solid #ddd;
-    padding: 0 8px 8px;
-    justify-content: space-between;
-}
-
-.list__item-content {
-    flex-grow: 1;
-    padding: 0 16px;
-    word-break: break-word;
+    background-color: white;
 }
 
 .list__item--content--done {
     text-decoration: line-through;
+}
+
+.list__header {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    padding-right: 10px;
+    grid-gap: 8px;
+    border-bottom: 1px solid #ccc;
+    align-items: center;
+}
+
+@media(max-width:767px) {
+    .list__header {
+        grid-template-columns: 1fr;
+    }
+}
+
+.list__headerText {
+    margin: 0;
+    padding: 20px;
+}
+
+.list__actionButton {
+    font-style: normal;
+    border: none;
+    color: teal;
+    background-color: white;
+}
+
+@media(max-width:767px) {
+    .list__actionButtons {
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        padding: 10px;
+    }
+}
+
+@media(max-width:767px) {
+    .list__actionButton {
+        padding: 8px;
+    }
+}
+
+.list__actionButton:hover {
+
+    color: rgba(0, 128, 128, 0.5);
+    transition: 0.5s;
+}
+
+.list__actionButton:disabled {
+    color: rgba(0, 128, 128, 0.2);
+}
+
+.list__newTask {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    grid-gap: 8px;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    align-items: center;
+}
+
+.list__newTask--hidden {
+    display: none;
+}
+
+.list__buttons {
+    color: white;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    border: none;
+}
+
+.list__buttons--remove {
+    background-color: red;
+    transition: 0.5s;
+}
+
+.list__buttons--remove:hover {
+    background-color: rgba(255, 47, 0, 0.898);
+}
+
+.list__buttons--done {
+    background-color: green;
+    transition: 0.5s;
+}
+
+.list__buttons--done:hover {
+    background-color: rgba(0, 128, 0, 0.733);
+}
+
+.list__content--done {
+    text-decoration-line: line-through;
 }
