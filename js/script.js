@@ -35,6 +35,24 @@
         hideDoneTasks = !hideDoneTasks;
         render();
     };
+    const renderTasks = () => {
+        let tasksListHTMLConetent = "";
+        for (const task of tasks) {
+
+        tasksListHTMLConetent += `
+        <li class="list__newTask ${task.done && hideDoneTasks ? "list__newTask--hidden": ""}">
+         <button class="js-done list__buttons list__buttons--done">${task.done ? "✓" : ""}</button>
+         <span class="list__item--content ${task.done ? "list__item--content--done" : ""}">
+         ${task.content}</span>
+         <button class="js-remove list__buttons list__buttons--remove">🗑</button>
+        </li>
+         `
+        }
+
+        document.querySelector(".js-tasks").innerHTML = tasksListHTMLConetent;
+        bindEvents();
+    };
+    
     const bindToggleDoneEvents = () => {
 
         const toggleDoneButtons = document.querySelectorAll(".js-done");
@@ -60,23 +78,6 @@
         inputElement.focus()
     }
 
-    const renderTasks = () => {
-        let tasksListHTMLConetent = "";
-        for (const task of tasks) {
-
-        tasksListHTMLConetent += `
-        <li class="list__newTask ${task.done && hideDoneTasks ? "list__newTask--hidden": ""}">
-         <button class="js-done list__buttons list__buttons--done">${task.done ? "✓" : ""}</button>
-         <span class="list__item--content ${task.done ? "list__item--content--done" : ""}">
-         ${task.content}</span>
-         <button class="js-remove list__buttons list__buttons--remove">🗑</button>
-        </li>
-         `
-        }
-
-        document.querySelector(".js-tasks").innerHTML = tasksListHTMLConetent;
-        bindEvents();
-    };
 
     const renderButtons = () => {
 
