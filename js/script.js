@@ -82,14 +82,17 @@
 
         const actionButtons = document.querySelector(".js-buttons");
 
-        if (!tasks.length) {
-            actionButtons.inerHTML = "";
+        if (tasks.length ===0) {
+            actionButtons.innerHTML = "";
             return;
         };
 
         actionButtons.innerHTML = `
-        <button class="list__actionButton js-toggleHideDoneTasks">${hideDoneTasks ? "Pokaż" : "Ukryj"} ukończone </button>
-        <button class="list__actionButton list__actionButton--disabled js-toggleAllTaskDone"${tasks.every(({ done }) => done) ? "disabled" : ""}> Ukończ wszystkie</button>
+        <button class="list__actionButton js-toggleHideDoneTasks">
+        ${hideDoneTasks ? "Pokaż" : "Ukryj"} ukończone </button>
+        <button class="list__actionButton list__actionButton--disabled js-toggleAllTaskDone"
+        ${tasks.every(({ done }) => done) ? "disabled" : ""}>
+          Ukończ wszystkie</button>
         `;
     };
     const BindButtonsEvents = () => {
