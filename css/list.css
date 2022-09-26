@@ -36,6 +36,7 @@
     border: none;
     color: teal;
     background-color: white;
+    transition: 0.5s;
 }
 
 @media(max-width:767px) {
@@ -53,9 +54,7 @@
 }
 
 .list__actionButton:hover {
-
     color: rgba(0, 128, 128, 0.5);
-    transition: 0.5s;
 }
 
 .list__actionButton:disabled {
@@ -81,6 +80,7 @@
     width: 30px;
     height: 30px;
     border: none;
+    transition: 0.5s;
 }
 
 .list__buttons--remove {
@@ -94,7 +94,6 @@
 
 .list__buttons--done {
     background-color: green;
-    transition: 0.5s;
 }
 
 .list__buttons--done:hover {

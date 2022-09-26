@@ -12,7 +12,8 @@
     const addNewTask = (newTaskContent) => {
         tasks = [
             ...tasks,
-            { content: newTaskContent }];
+            { content: newTaskContent }
+        ];
         render();
     };
     const toggleTaskDone = (taskIndex) => {

@@ -10,10 +10,10 @@
 
 .form__button {
     background-color: teal;
-    color: white;
     padding: 8px;
     border: none;
-    color: white,
+    color: white;
+    transition: 0,5s;
 }
 
 @media (max-width: 768px) {
@@ -23,13 +23,12 @@
 }
 
 .form__button:hover {
-    background-color:rgb(22, 139, 139);
-    transition: 0.5s;
+    background-color: rgb(22, 139, 139);
     transform: scale(1.1);
 }
 
 .form__button:active {
-    background-color:rgb(36, 148, 148);
+    background-color:hsl(180, 92%, 45%);
 }
 
 .form__input {
